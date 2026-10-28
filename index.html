@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Fauzan Fauzy · Game and software programmer</title>
+  <meta name="description" content="Portfolio of Fauzan Fauzy, a game and software programmer in Singapore: custom C++ engine work, a multiplayer browser game, a Unity Android app and small tools people use.">
+  <meta name="theme-color" content="#000000">
+  <meta property="og:title" content="Fauzan Fauzy · Game and software programmer">
+  <meta property="og:description" content="My portfolio is a small computer. Switch it on, or press DEL for the BIOS.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://qayzan.github.io/portfolio/">
+  <meta property="og:image" content="https://qayzan.github.io/portfolio/assets/img/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://qayzan.github.io/portfolio/assets/img/og.png">
+  <link rel="canonical" href="https://qayzan.github.io/portfolio/">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/Web437_IBM_VGA_8x16.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/os.css">
+</head>
+<body>
+  <!-- For screen readers, search engines and anyone without JavaScript. -->
+  <div class="sr" id="about-text">
+    <h1>Fauzan Fauzy, game and software programmer in Singapore</h1>
+    <p>Third year Computer Science (RTIS) at DigiPen Singapore and SIT. Looking for an IWSP placement from 3 May 2027 to 7 April 2028.</p>
+    <p>This page is a small pretend computer. The same portfolio as a normal page: <a href="classic.html">plain version</a>.</p>
+  </div>
+  <noscript><p class="noscript">This portfolio is a small computer that needs JavaScript. <a href="classic.html">Open the plain version</a>.</p></noscript>
+
+  <!-- 1. power button -->
+  <div class="power" id="power" hidden>
+    <p class="who">Fauzan Fauzy<span>Game and software programmer, Singapore</span></p>
+    <button class="power-btn" id="power-btn" type="button" aria-label="Power on">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v8M7.05 6.05a7 7 0 1 0 9.9 0" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"/></svg>
+    </button>
+    <span class="led" aria-hidden="true"></span>
+    <p class="hint">Press the button to switch it on.<br>Press DEL while it starts for BIOS Setup.</p>
+    <p class="row"><button class="skip" id="power-sound" type="button" aria-pressed="true">Sound on</button><button class="skip" id="power-skip" type="button">Skip to desktop</button></p>
+  </div>
+
+  <!-- 2. text mode screen: POST and BIOS Setup -->
+  <div class="crt scan" id="crt" hidden>
+    <div class="glass"><div class="page" id="page" aria-hidden="true"><pre id="screen"></pre></div></div>
+    <p class="sr" aria-live="polite" id="crt-say">Starting up. Use Skip to desktop to go straight to the portfolio.</p>
+  </div>
+  <button class="post-skip" id="post-skip" type="button" hidden>Skip to desktop</button>
+
+  <!-- 3. splash -->
+  <div class="splash" id="splash" hidden>
+    <canvas id="splash-sig" role="img" aria-label="Fauzan Fauzy, in pixels"></canvas>
+    <p class="ver">FAUZ OS 26</p>
+    <div class="bar" id="splash-bar" aria-hidden="true"></div>
+  </div>
+
+  <!-- 4. desktop -->
+  <div id="os" hidden>
+    <main class="desk" id="desk" aria-label="Desktop">
+      <canvas class="wall-canvas" id="wall-canvas" aria-hidden="true" hidden></canvas>
+      <div class="icons" id="icons" role="listbox" aria-label="Desktop icons"></div>
+      <p class="wallmark" id="wallmark" aria-hidden="true" hidden>FAUZ OS<small>26</small></p>
+      <button class="activate" id="activate-mark" type="button" hidden><b>Activate FAUZ OS</b><span>Go to Settings to activate FAUZ OS.</span></button>
+    </main>
+
+    <div class="menu start-menu" id="start-menu" role="menu" aria-label="Start" hidden>
+      <div class="banner" aria-hidden="true"><b>FAUZ</b> OS 26</div>
+      <div class="list" id="start-list"></div>
+    </div>
+    <div class="menu" id="ctx" role="menu" aria-label="Desktop menu" hidden></div>
+    <div class="balloon" id="balloon" role="status" hidden><b>FAUZ OS is not activated</b><p>Your copy may be at risk of bugs. Click here to activate.</p><button type="button" data-x aria-label="Close">×</button></div>
+
+    <footer class="taskbar">
+      <button class="start" id="start" type="button" aria-haspopup="menu" aria-expanded="false" aria-controls="start-menu"><span class="start-ico" id="start-ico"></span>Start</button>
+      <div class="tasks" id="tasks" aria-label="Open windows"></div>
+      <div class="tray">
+        <button type="button" id="tray-sound" aria-pressed="true" aria-label="Sound"></button>
+        <span class="clock" id="clock"></span>
+      </div>
+    </footer>
+  </div>
+
+  <!-- 5. shut down -->
+  <div class="halt" id="halt" hidden>
+    <p id="halt-msg">It is now safe to close this tab.</p>
+    <p class="row"><button type="button" id="halt-restart">Restart</button><a href="classic.html">Plain version</a></p>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/sig.js"></script>
+  <script src="js/os.js"></script>
+</body>
+</html>

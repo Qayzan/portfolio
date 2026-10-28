@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fauzan Fauzy · Game and software programmer</title>
+  <meta name="description" content="Portfolio of Fauzan Fauzy, a game and software programmer in Singapore: custom C++ engine work, a multiplayer browser game, a Unity Android app and small tools people use.">
+  <meta name="theme-color" content="#131209">
+  <meta property="og:title" content="Fauzan Fauzy · Game and software programmer">
+  <meta property="og:description" content="Engines, gameplay, audio and small tools. The bugs are eating the name; fix them on the way in.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://qayzan.github.io/portfolio/classic.html">
+  <meta property="og:image" content="https://qayzan.github.io/portfolio/assets/img/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://qayzan.github.io/portfolio/assets/img/og.png">
+  <link rel="canonical" href="https://qayzan.github.io/portfolio/classic.html">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip" href="#work">Skip to the work</a>
+
+  <nav class="nav" aria-label="Main">
+    <a class="nav-logo" href="#top" aria-label="Fauzan Fauzy, back to top">ff<span>.</span></a>
+    <span class="nav-sep" aria-hidden="true"></span>
+    <a class="nav-link" href="#work">Work</a>
+    <a class="nav-link" href="#side">Side quests</a>
+    <a class="nav-link" href="#about">About</a>
+    <a class="nav-link" href="index.html">FAUZ OS</a>
+    <a class="nav-link nav-cta" href="#contact">Contact</a>
+  </nav>
+
+  <header class="hero" id="top">
+    <canvas id="hero-field" aria-hidden="true"></canvas>
+    <div class="counter mono" aria-live="polite"><span id="counter-label">bugs fixed · name intact</span><b id="counter-value">0 · 0%</b></div>
+    <div class="hero-copy">
+      <p class="status mono"><span id="status"></span><span class="caret" aria-hidden="true"></span></p>
+      <h1>I build the systems players feel but never see.</h1>
+      <p class="sub"><b>Fauzan Fauzy</b>, game and software programmer. Third year Computer Science at DigiPen and SIT, building engines, gameplay, audio and small tools people actually use.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#work">See my work <span aria-hidden="true">→</span></a>
+        <span class="proof"><b class="mono">172 of 589</b> commits on a custom C++20 engine</span>
+      </div>
+    </div>
+    <p class="hint mono" id="hint"></p>
+  </header>
+
+  <main>
+    <section class="tagline" aria-label="What I do">
+      <p class="tagline-text" id="tagline">Small teams, real players, shipped builds. I write the code that holds a game together, and keep it working after launch.</p>
+    </section>
+
+    <section class="section" id="work" aria-labelledby="work-title">
+      <div class="section-head reveal">
+        <p class="eyebrow mono">01 · Work</p>
+        <h2 id="work-title">Select a level</h2>
+        <p class="section-sub">Team games, a multiplayer game I run myself, an app for kids and a tool my friends use. Pick one for the full story.</p>
+      </div>
+      <ol class="levels" id="levels"></ol>
+    </section>
+
+    <section class="section" id="side" aria-labelledby="side-title">
+      <div class="section-head reveal">
+        <p class="eyebrow mono">02 · Side quests</p>
+        <h2 id="side-title">Smaller things I built for fun</h2>
+      </div>
+      <div class="quests" id="quests"></div>
+    </section>
+
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="section-head reveal">
+        <p class="eyebrow mono">03 · About</p>
+        <h2 id="about-title">Character select</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-copy reveal">
+          <p class="about-lead">Third year Computer Science (Real Time Interactive Simulation) at DigiPen Institute of Technology Singapore and the Singapore Institute of Technology.</p>
+          <p>I like the parts of games that players feel but never see: the audio mixer that stops a footstep from clicking, the collision grid that keeps the frame rate steady, the save that is still there tomorrow. Outside school I build small tools and party games for my friends, then keep patching them because they actually use them.</p>
+          <p>Before university I tested Razer products for developers and served as an SCDF firefighting instructor, which is where I learned to write a clear bug report and to teach a room full of trainees.</p>
+        </div>
+        <div class="panel reveal" aria-label="Timeline">
+          <p class="panel-title mono">Save file</p>
+          <ol class="timeline">
+            <li><span class="mono">2024 – 2028</span><b>BSc Computer Science (RTIS)</b><span>DigiPen Singapore and Singapore Institute of Technology</span></li>
+            <li><span class="mono">2022 – 2024</span><b>Firefighting instructor (Section Commander)</b><span>Singapore Civil Defence Force</span></li>
+            <li><span class="mono">2021</span><b>Product testing intern, Razer products</b><span>Beyondsoft Singapore</span></li>
+            <li><span class="mono">2019 – 2022</span><b>Diploma in Business &amp; Financial Technology</b><span>Nanyang Polytechnic</span></li>
+          </ol>
+        </div>
+      </div>
+      <div class="panel inventory reveal" aria-label="Skills">
+        <p class="panel-title mono">Inventory</p>
+        <ul>
+          <li><b>C++17/20</b><span>engines, gameplay</span></li>
+          <li><b>C#</b><span>Unity 6</span></li>
+          <li><b>FMOD</b><span>audio and mixing</span></li>
+          <li><b>ImGui</b><span>editor tools</span></li>
+          <li><b>Python</b><span>automation</span></li>
+          <li><b>JavaScript</b><span>web games</span></li>
+          <li><b>Java</b><span>Android bridges</span></li>
+          <li><b>SQL</b><span>MySQL, PostgreSQL</span></li>
+          <li><b>REST and JSON</b><span>Supabase, APIs</span></li>
+          <li><b>Git and Jira</b><span>team workflow</span></li>
+          <li><b>Testing</b><span>unit, regression</span></li>
+          <li><b>Claude Code, Codex</b><span>reviewed and tested</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <p class="eyebrow mono reveal">04 · Contact</p>
+      <h2 id="contact-title" class="contact-title reveal">Got a level that needs building?</h2>
+      <p class="status-line reveal"><span class="dot" aria-hidden="true"></span> Available for IWSP from <span class="mono">3 May 2027</span> to <span class="mono">7 April 2028</span></p>
+      <div class="contact-links reveal">
+        <a class="btn btn-primary btn-big" href="mailto:fauzan0410@gmail.com">Email me</a>
+        <a class="btn" href="https://www.linkedin.com/in/fauz/" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a>
+        <a class="btn" href="https://github.com/Qayzan" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a>
+      </div>
+      <p class="contact-mail mono reveal">fauzan0410@gmail.com</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© 2026 Fauzan Fauzy</span>
+    <nav class="footer-links" aria-label="Footer">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="index.html">FAUZ OS version</a>
+      <a href="#top">Back to top ↑</a>
+    </nav>
+  </footer>
+
+  <img class="hover-preview" id="hover-preview" alt="" aria-hidden="true">
+
+  <dialog class="level-dialog" id="level-dialog" aria-labelledby="level-dialog-title">
+    <div class="dialog-inner" id="level-dialog-body"></div>
+  </dialog>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/hero.js"></script>
+</body>
+</html>

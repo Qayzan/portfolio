@@ -8,7 +8,7 @@ My portfolio is a small pretend computer. Switch it on, watch it run its power o
 
 [![The BIOS Setup Utility, blue text mode screen](assets/img/readme-bios.png)](https://qayzan.github.io/portfolio/#bios)
 
-I'm a third year Computer Science (RTIS) student at DigiPen Singapore and SIT, looking for an IWSP placement from 3 May 2027 to 7 April 2028. Prefer a normal page? There is a [plain version](https://qayzan.github.io/portfolio/classic.html).
+I'm a third year Computer Science (Real-Time Interactive Simulation) student at DigiPen Singapore and SIT, interested in game programming, engine systems and tools work. Prefer a normal page? There is a [plain version](https://qayzan.github.io/portfolio/classic.html).
 
 ## What's inside
 

@@ -12,7 +12,7 @@
         <img class="level-thumb${l.pixel ? ' pixel' : ''}" src="${l.cover}" width="${l.coverW}" height="${l.coverH}" alt="" loading="lazy">
         <span class="level-num">LVL ${pad(i + 1)}</span>
         <span class="level-title">${esc(l.title)}</span>
-        <span class="level-meta">${esc(l.kind)} · ${esc(l.dates)}</span>
+        <span class="level-meta">${esc(l.kind)}, ${esc(l.dates)}</span>
         <span class="level-status" data-status="${esc(l.status)}">${esc(l.status)}</span>
       </button>
     </li>`).join('');
@@ -66,19 +66,18 @@
     const tall = l.gallery.length && /eduvision|mobile/.test(l.gallery[0][0]);
     body.innerHTML = `
       <div class="dialog-bar">
-        <span class="mono">LVL ${pad(i + 1)} / ${pad(data.levels.length)} · ${esc(l.status)}</span>
+        <span class="mono">LVL ${pad(i + 1)} / ${pad(data.levels.length)} | ${esc(l.status)}</span>
         <div class="dialog-nav">
           <button class="icon-btn" type="button" data-step="-1" aria-label="Previous project">←</button>
           <button class="icon-btn" type="button" data-step="1" aria-label="Next project">→</button>
           <button class="icon-btn" type="button" data-close aria-label="Close">✕</button>
         </div>
       </div>
-      <p class="eyebrow mono">${esc(l.kind)}</p>
       <h2 class="dialog-title" id="level-dialog-title">${esc(l.title)}</h2>
       <p class="dialog-tagline">${esc(l.tagline)}</p>
-      <p class="dialog-meta mono"><span>${esc(l.dates)}</span><span>${esc(l.role)}</span></p>
+      <p class="dialog-meta mono"><span>${esc(l.kind)}</span><span>${esc(l.dates)}</span><span>${esc(l.role)}</span></p>
       ${l.links.length ? `<div class="dialog-links">${l.links.map(([label, href, primary]) =>
-        `<a class="btn${primary ? ' btn-primary' : ''}" href="${href}" target="_blank" rel="noopener">${esc(label)} ↗</a>`).join('')}</div>` : ''}
+        `<a class="btn${primary ? ' btn-primary' : ''}" href="${href}" target="_blank" rel="noopener">${esc(label)}</a>`).join('')}</div>` : ''}
       ${l.note ? `<p class="note">${esc(l.note)}</p>` : ''}
       ${media}
       <div class="stats">${l.stats.map(([v, k]) => `<div class="stat"><b>${esc(v)}</b><span>${esc(k)}</span></div>`).join('')}</div>

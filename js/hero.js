@@ -95,7 +95,7 @@
   // ===================================================================== scene 1: garden
   const garden = {
     status: 'in a garden of small bugs,\nfix a few.',
-    hint: 'click a bug to fix it · click the ground to drop a crumb',
+    hint: 'click a bug to fix it, or click the ground to drop a crumb',
     counter: 'bugs fixed',
     init() {
       this.bugs = []; this.crumbs = []; this.rings = []; this.bits = []; this.fixed = 0;
@@ -204,7 +204,7 @@
   // ===================================================================== scene 3: signal (name made of cells)
   const signal = {
     status: 'fauzan fauzy,\nassembled one cell at a time.',
-    hint: 'move through the letters · click to scatter them',
+    hint: 'move through the letters, or click to scatter them',
     counter: 'assembled',
     init() { this.build(); },
     resize() { this.build(); },
@@ -266,8 +266,8 @@
   // every cell it ate.
   const combo = {
     status: 'fauzan fauzy,\nassembled one cell at a time.',
-    hint: 'click a bug to fix it · click the ground to drop a crumb · move through the letters',
-    counter: 'bugs fixed · name intact',
+    hint: 'click a bug to fix it, click the ground to drop a crumb, or move through the letters',
+    counter: 'bugs fixed | name intact',
     init() {
       signal.build.call(this);
       this.bugs = []; this.crumbs = []; this.rings = []; this.bits = []; this.fixed = 0; this.t = 0; this.waveAt = 2.8; this.wave = 0;
@@ -346,7 +346,7 @@
         q.x += q.vx * dt; q.y += q.vy * dt;
         if (Math.abs(q.x - q.hx) < 0.8 && Math.abs(q.y - q.hy) < 0.8) intact++;
       }
-      setCounter(this.fixed + ' · ' + Math.round(100 * intact / Math.max(1, this.p.length)) + '%');
+      setCounter(this.fixed + ' | ' + Math.round(100 * intact / Math.max(1, this.p.length)) + '%');
 
       for (const c of this.crumbs) if (c.left <= 0) c.gone = (c.gone || 0) + dt;
       this.crumbs = this.crumbs.filter(c => !(c.gone > 1));
@@ -444,7 +444,7 @@
     typeStatus(scene.status);
     scene.init();
     ready = true;
-    if (reduceMotion) { setCounter('0 · 100%'); frame(performance.now()); } else start();
+    if (reduceMotion) { setCounter('0 | 100%'); frame(performance.now()); } else start();
   };
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(go); else go();
 })();

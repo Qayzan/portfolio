@@ -458,7 +458,7 @@
     { t: 'STANDARD CMOS SETUP', d: 'Time, Date, Owner, School', go: 'std' },
     { t: 'BIOS FEATURES SETUP', d: 'Boot Sequence, Quick Power On Self Test', go: 'bios' },
     { t: 'CHIPSET FEATURES SETUP', d: 'Languages, Engines, Tools', go: 'chip' },
-    { t: 'POWER MANAGEMENT SETUP', d: 'Availability for a Placement', go: 'power' },
+    { t: 'POWER MANAGEMENT SETUP', d: 'Placement Status', go: 'power' },
     { t: 'PNP/PCI CONFIGURATION', d: 'Email, LinkedIn, GitHub', go: 'pnp' },
     { t: 'LOAD BIOS DEFAULTS', d: 'Load BIOS Defaults except Standard CMOS SETUP', ask: 'Load BIOS Defaults (Y/N)? ', def: 'N', act: 'defaults' },
     { t: 'LOAD SETUP DEFAULTS', d: 'Load SETUP Defaults except Standard CMOS SETUP', ask: 'Load SETUP Defaults (Y/N)? ', def: 'N', act: 'defaults' },
@@ -503,7 +503,7 @@
     ] },
     power: { title: 'POWER MANAGEMENT SETUP', items: () => [
       { l: 'Power Management', s: 'Power', v: 'User Define' },
-      { l: 'IWSP Placement', s: 'IWSP', v: 'Looking', h: 'Looking for an Integrated Work Study Programme placement.' },
+      { l: 'IWSP Placement', s: 'IWSP', v: 'Secured', h: 'Integrated Work Study Programme placement secured.' },
       { l: 'Available From', s: 'From', v: '03 May 2027' },
       { l: 'Available To', s: 'To', v: '07 Apr 2028' },
       { l: 'Wake Up On Email', s: 'Wake On Email', v: 'Enabled', href: 'mailto:' + mail, h: 'Press Enter to write to ' + mail + '.' },
@@ -862,7 +862,7 @@
   }
   function contact() {
     return `<h1>Contact</h1>
-      <p class="lead">Open to an IWSP placement from 3 May 2027 to 7 April 2028.</p>
+      <p class="lead">Interested in game programming, engine systems and tools work. If you're building something in that space, I'd be glad to talk.</p>
       <p><a class="btn primary" href="mailto:${mail}">Email ${mail}</a></p>
       <p><a class="btn" href="https://www.linkedin.com/in/fauz/" target="_blank" rel="noopener">LinkedIn</a><a class="btn" href="https://github.com/Qayzan" target="_blank" rel="noopener">GitHub</a></p>`;
   }
@@ -1068,7 +1068,7 @@
   function bugsCrash() {
     msgBox({
       title: 'BUGS.EXE', icon: 'err',
-      html: 'This program has performed an illegal operation and will be shut down.<br><br>If the problem persists, contact the program vendor. He is free for an IWSP placement from May 2027.',
+      html: 'This program has performed an illegal operation and will be shut down.<br><br>If the problem persists, contact the program vendor.',
       details: 'BUGS.EXE caused an invalid page fault in\nmodule NAME.DLL at 0026:FA02C011.\n\nRegisters:\nEAX=DEADBEEF CS=0026 EIP=FA02C011\nEBX=0BADF00D SS=002E ESP=00C0FFEE\n\nBytes at CS:EIP:\n46 41 55 5A 41 4E 20 46 41 55 5A 59',
       buttons: [{ label: 'Close', primary: true, fn: () => closeWin('bugs') }],
     });
@@ -1398,8 +1398,8 @@
   function activateBody() {
     if (S.activated) return `<h1>FAUZ OS is activated</h1>
       <p class="lead">Thank you. This copy of FAUZ OS is genuine.</p>
-      <p>You proved you are not a bug. If you would like the programmer as well, the enterprise licence is still open.</p>
-      <p><a class="btn primary" href="mailto:${mail}?subject=${encodeURIComponent('FAUZ OS enterprise licence (IWSP)')}">Request the enterprise licence</a></p>`;
+      <p>You proved you are not a bug. The enterprise licence (one programmer) is booked until April 2028, but the waiting list is open.</p>
+      <p><a class="btn primary" href="mailto:${mail}?subject=${encodeURIComponent('FAUZ OS enterprise licence (waiting list)')}">Join the waiting list</a></p>`;
     return `<h1>Activate FAUZ OS</h1>
       <p class="lead">This copy of FAUZ OS has not been activated.</p>
       <p>Everything still works. The watermark stays, and the bugs can tell.</p>
@@ -1407,8 +1407,8 @@
         <p>Clear one round of Bug Sweeper on Beginner. No product key needed.</p>
         <p><button class="btn primary" type="button" data-act="sweep-activate">Start Bug Sweeper</button></p></fieldset>
       <fieldset class="group"><legend>Option 2: Enterprise licence</legend>
-        <p>Includes one (1) programmer, full time, from 3 May 2027 to 7 April 2028. Payable in IWSP.</p>
-        <p><a class="btn" href="mailto:${mail}?subject=${encodeURIComponent('FAUZ OS enterprise licence (IWSP)')}">Request a licence</a></p></fieldset>`;
+        <p>Sold out. The one (1) programmer is booked from 3 May 2027 to 7 April 2028.</p>
+        <p><a class="btn" href="mailto:${mail}?subject=${encodeURIComponent('FAUZ OS enterprise licence (waiting list)')}">Join the waiting list</a></p></fieldset>`;
   }
   function activated() {
     setSetting('activated', true);
